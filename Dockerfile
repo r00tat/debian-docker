@@ -19,5 +19,6 @@ RUN add-apt-repository \
        main"
 
 
-RUN apt-get update && apt-get -y install docker-engine
+RUN apt-get update
+RUN apt-get -y install docker-engine=1.13.0-0~debian-jessie
 
