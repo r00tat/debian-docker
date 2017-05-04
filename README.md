@@ -7,12 +7,12 @@ The image can be run either by using the docker socket or with `--privileged`. A
 
 Docker socket:
 ```
-docker run -v /var/run/docker.sock:/var/run/docker.sock paulwoelfel/debian-docker docker info
+docker run --rm -v /var/run/docker.sock:/var/run/docker.sock paulwoelfel/debian-docker docker info
 ```
 
 privileged:
 ```
-docker run --privileged paulwoelfel/debian-docker docker info
+docker run --rm --privileged paulwoelfel/debian-docker docker info
 ```
 
 
