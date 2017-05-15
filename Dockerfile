@@ -2,10 +2,13 @@ FROM debian:jessie
 MAINTAINER github@frig.at
 
 RUN apt-get update && apt-get -y upgrade && \
-	apt-get -y install apt-transport-https \
+	apt-get -y install \
+	apt-transport-https \
     ca-certificates \
+    curl \
+    gettext \
     software-properties-common \
-    curl && \
+    && \
     rm -rf /var/lib/apt/lists/*
 
 RUN curl -fsSL https://yum.dockerproject.org/gpg | apt-key add -
