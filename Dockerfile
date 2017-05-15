@@ -15,9 +15,9 @@ RUN add-apt-repository \
        main"
 
 
-ENV DOCKER_VERSION 1.13.1-0
+ENV DOCKER_VERSION "1.13"
 RUN apt-get update && \
-	apt-get -y install docker-engine=$DOCKER_VERSION~debian-jessie && \
+	apt-get -y install docker-engine=$(apt-cache show docker-engine | grep 'Version:' | awk '{print $NF}' | grep "$DOCKER_VERSION" | head -n 1 | sed 's/~debian-jessie//')~debian-jessie && \
 	rm -rf /var/lib/apt/lists/*
 
 CMD ["/bin/bash"]
