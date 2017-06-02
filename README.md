@@ -15,8 +15,14 @@ privileged:
 docker run --rm --privileged paulwoelfel/debian-docker docker info
 ```
 
+## Building
 
-# Docs
+```
+docker build -t paulwoelfel/debian-docker .
+```
+
+
+## Docs
 
 This docker image uses the instructions from [docker.com](https://docs.docker.com/engine/installation/linux/debian/) to install the docker binary. 
 
