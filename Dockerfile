@@ -1,4 +1,4 @@
-FROM debian:jessie
+FROM debian:stretch
 MAINTAINER github@frig.at
 
 ENV DOCKER_VERSION ""
