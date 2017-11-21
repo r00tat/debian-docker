@@ -1,7 +1,7 @@
 FROM debian:stretch
 MAINTAINER github@frig.at
 
-ENV DOCKER_VERSION ""
+ARG DOCKER_VERSION=""
 
 RUN apt-get update && apt-get -y upgrade && \
     apt-get -y install \
